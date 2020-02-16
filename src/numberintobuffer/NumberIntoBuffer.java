@@ -5,6 +5,8 @@
  */
 package numberintobuffer;
 
+import java.nio.IntBuffer;
+import java.util.Arrays;
 /**
  *
  * @author Ameer
@@ -16,6 +18,13 @@ public class NumberIntoBuffer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        IntBuffer buffer = IntBuffer.allocate(10);
+        buffer.put(4);
+        buffer.put(2);
+        buffer.put(4, 2);
+        buffer.put(7, 2);
+        System.out.println(Arrays.toString(buffer.array()));
     }
     
 }
